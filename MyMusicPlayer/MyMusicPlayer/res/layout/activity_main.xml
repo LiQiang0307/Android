@@ -1,0 +1,78 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity" >
+
+    <RelativeLayout
+        android:id="@+id/layout_musicList"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_weight="5"
+        android:background="#ffff0000" >
+
+        <ListView
+            android:id="@+id/listView_music"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+        </ListView>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_controllTable"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_weight="1"
+        android:background="#ffffff00" >
+
+        <ImageView
+            android:id="@+id/button_play"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerInParent="true"
+            android:onClick="playMusic"
+            android:src="@drawable/bfzn_004" />
+
+        <ImageView
+            android:id="@+id/button_pause"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@+id/button_play"
+            android:onClick="pauseMusic"
+            android:src="@drawable/bfzn_003" />
+
+        <ImageView
+            android:id="@+id/button_stop"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:layout_toLeftOf="@+id/button_play"
+            android:onClick="stopMusic"
+            android:src="@drawable/bfzn_006" />
+
+        <ImageView
+            android:id="@+id/button_previous"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:layout_toLeftOf="@+id/button_stop"
+            android:onClick="lastMusic"
+            android:src="@drawable/bfzn_001" />
+
+        <ImageView
+            android:id="@+id/button_next"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@+id/button_pause"
+            android:onClick="nextMusic"
+            android:src="@drawable/bfzn_002" />
+    </RelativeLayout>
+
+</LinearLayout>
